@@ -4,11 +4,11 @@ This is a guide for big data ecosystem setup and the common problem I try to sol
  - Hadoop Single Node
  - Hadoop Cluster Node
  - Spark Standalone Cluster
- - Amazon Cluster
+ - Amazon Cluster (spark-ec2, adding slave)
  - Spark sbt 
  - Pyspark ipython notebook
  - Common Problem
  
-Resource
+## Resource
 [Spark 編程指南繁體中文版](https://www.gitbook.com/book/taiwansparkusergroup/spark-programming-guide-zh-tw/details)
 
