@@ -18,7 +18,11 @@ I used hadoop hdfs and Spark in my Master project. This is a guide for big data 
    
 ## Resource  
 ###Gitbook
+Begin  
 [Spark 編程指南繁體中文版](https://taiwansparkusergroup.gitbooks.io/spark-programming-guide-zh-tw/content/)  
+[Mastering Apache Spark](https://jaceklaskowski.gitbooks.io/mastering-apache-spark/content/)  
+Advance  
+[Databricks Spark Knowledge Base](https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/)
   
 ###Webpage
 [AcmCamp - Hands-on Exercises](http://ampcamp.berkeley.edu/6/exercises/data-exploration-using-spark-sql.html)
