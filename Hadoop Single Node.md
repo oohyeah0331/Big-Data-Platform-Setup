@@ -20,10 +20,10 @@ net.ipv6.conf.lo.disable_ipv6 = 1
 ```  
 11.$sudo sysctl -p  
 12.$cat /proc/sys/net/ipv6/conf/all/disable_ipv6 (return 1)  
-13.$wget http://www.motorlogy.com/apache/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz   
-   (All version : http://www.motorlogy.com/apache/hadoop/)  
-14.$tar xfz hadoop-2.6.0.tar.gz  
-15.$sudo mv hadoop-2.6.0 / hadoop  
+13.$wget http://ftp.twaren.net/Unix/Web/apache/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz   
+   (Other version : http://ftp.twaren.net/Unix/Web/apache/hadoop/common/)  
+14.$tar xfz hadoop-2.7.3.tar.gz  
+15.$sudo mv hadoop-2.7.3 hadoop  
 16.$sudo vim ~/.bashrc  
 ```
 #HADOOP VARIABLES START
@@ -36,7 +36,7 @@ export HADOOP_COMMON_HOME=$HADOOP_INSTALL
 export HADOOP_HDFS_HOME=$HADOOP_INSTALL
 export YARN_HOME=$HADOOP_INSTALL
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_INSTALL/lib/native
-export HADOOP_OPTS=”-Djava.library.path=$HADOOP_INSTALL/lib”
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib"
 #HADOOP VARIABLES END
 ```  
 17.$source ~/.bashrc  
@@ -83,6 +83,7 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
     </property>
 </configuration>
 ```  
+25.$cd
 25.$hadoop namenode -format  
 26.$start-dfs.sh (type “yes”)  
 27.$start-yarn.sh  
