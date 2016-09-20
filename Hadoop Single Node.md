@@ -74,7 +74,7 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
     </property>
 </configuration>
 ```  
-22.$cd
+22.$cd  
 23.$hadoop namenode -format  
 24.$start-dfs.sh (type “yes”)  
 25.$start-yarn.sh  
