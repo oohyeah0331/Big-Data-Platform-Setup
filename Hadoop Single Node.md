@@ -79,8 +79,9 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 24.$start-dfs.sh (type “yes”)  
 25.$start-yarn.sh  
 26.$jps  
+  
+If it returns ResourceManager、Jps、DataNode、SecondaryNameNode、NodeManager and NameNode, then you are done.  
+  
 27.$stop-dfs.sh  
 28.$stop-yarn.sh  
-
-If it returns ResourceManager、Jps、DataNode、SecondaryNameNode、NodeManager and NameNode, then you are done.
 
