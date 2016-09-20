@@ -81,7 +81,7 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 26.$jps  
   
 If it returns ResourceManager、Jps、DataNode、SecondaryNameNode、NodeManager and NameNode, then you are done.  
-  
+![Image title](https://github.com/oohyeah0331/Big-Data-Platform-Setup/blob/master/image/singlenode%E5%AE%89%E8%A3%9D%E5%AE%8C%E7%95%A2.PNG)  
 27.$stop-dfs.sh  
 28.$stop-yarn.sh  
 
