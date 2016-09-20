@@ -11,20 +11,11 @@ virtualbox version  >>>  4.3.30   ubuntu version  >>>  14.04.3
 7.$cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys  
 8.$ssh localhost (type "yes")  login without key  
 9.$exit  
-10.$sudo vim /etc/sysctl.conf  
-```
-#disable ipv6
-net.ipv6.conf.all.disable_ipv6 = 1
-net.ipv6.conf.default.disable_ipv6 = 1
-net.ipv6.conf.lo.disable_ipv6 = 1
-```  
-11.$sudo sysctl -p  
-12.$cat /proc/sys/net/ipv6/conf/all/disable_ipv6 (return 1)  
-13.$wget http://ftp.twaren.net/Unix/Web/apache/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz   
+10.$wget http://ftp.twaren.net/Unix/Web/apache/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz   
    (Other version : http://ftp.twaren.net/Unix/Web/apache/hadoop/common/)  
-14.$tar xfz hadoop-2.7.3.tar.gz  
-15.$sudo mv hadoop-2.7.3 hadoop  
-16.$sudo vim ~/.bashrc  
+11.$tar xfz hadoop-2.7.3.tar.gz  
+12.$sudo mv hadoop-2.7.3 hadoop  
+13.$sudo vim ~/.bashrc  
 ```
 #HADOOP VARIABLES START
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
@@ -39,14 +30,14 @@ export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_INSTALL/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib"
 #HADOOP VARIABLES END
 ```  
-17.$source ~/.bashrc  
-18.$cd hadoop/etc/hadoop  
-19.$sudo vim hadoop-env.sh  
+14.$source ~/.bashrc  
+15.$cd hadoop/etc/hadoop  
+16.$sudo vim hadoop-env.sh  
 ```  
 #export JAVA_HOME={JAVA_HOME}
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64 
 ```  
-20.$sudo vim core-site.xml  
+17.$sudo vim core-site.xml  
 ```
 <configuration>
     <property>
@@ -55,7 +46,7 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
     </property>
 </configuration>
 ```
-21.$sudo vim hdfs-site.xml  
+18.$sudo vim hdfs-site.xml  
 ```
 <configuration>
     <property>
@@ -64,8 +55,8 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
     </property>
 </configuration>
 ```  
-22.$cp mapred-site.xml.template mapred-site.xml  
-23.$sudo vim mapred-site.xml  
+19.$cp mapred-site.xml.template mapred-site.xml  
+20.$sudo vim mapred-site.xml  
 ```
 <configuration>
     <property>
@@ -74,7 +65,7 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
     </property>
 </configuration>
 ```
-24.$sudo vim yarn-site.xml  
+21.$sudo vim yarn-site.xml  
 ```
 <configuration>
     <property>
@@ -83,13 +74,13 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
     </property>
 </configuration>
 ```  
-25.$cd
-26.$hadoop namenode -format  
-27.$start-dfs.sh (type “yes”)  
-28.$start-yarn.sh  
-29.$jps  
-30.$stop-dfs.sh  
-31.$stop-yarn.sh  
+22.$cd
+23.$hadoop namenode -format  
+24.$start-dfs.sh (type “yes”)  
+25.$start-yarn.sh  
+26.$jps  
+27.$stop-dfs.sh  
+28.$stop-yarn.sh  
 
 If it returns ResourceManager、Jps、DataNode、SecondaryNameNode、NodeManager and NameNode, then you are done.
 
