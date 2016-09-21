@@ -141,20 +141,20 @@ export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_INSTALL/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib"
 #HADOOP VARIABLES END
 ```
-23.$hadoop namenode -format
-24.$start-dfs.sh (type “yes”)
-25.$start-yarn.sh
-26.$jps
+23.$hadoop namenode -format  
+24.$start-dfs.sh (type “yes”)  
+25.$start-yarn.sh  
+26.$jps  
 
-27.在master上會有
-SecondaryNameNode
-Jps
-NameNode
-ResourceManager
-28.在slave上會有
-Jps
-NodeManager
-DataNode
+27.在master上會有  
+SecondaryNameNode  
+Jps  
+NameNode  
+ResourceManager  
+28.在slave上會有  
+Jps  
+NodeManager  
+DataNode  
 
 
 參考網站  
